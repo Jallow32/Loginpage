@@ -8,5 +8,19 @@
 </head>
 <body>
     <h2 style = "color:brown; font-size: 13px;" >login here </h2>
+    <script type="module">
+        import { h, Component, render } from 'https://esm.sh/preact';
+        import htm from 'https://esm.sh/htm';
+      
+        // Initialize htm with Preact
+        const html = htm.bind(h);
+      
+        function App (props) {
+          return html`<h1>Hello ${props.name}!</h1>`;
+        }
+      
+        render(html`<${App} name="World" />`, document.body);
+      </script>
 </body>
+
 </html>
